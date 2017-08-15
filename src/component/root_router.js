@@ -9,9 +9,9 @@ export default class AppWithNavigationState extends React.Component {
         super(props);
     }
     render() {
-        const { navigationAction, navigationReducer } = this.props;
+        const { navigationAction,homeAction, navigationReducer, homeReducer } = this.props;
         return (
-            <RootRouterContainer navigation={addNavigationHelpers({ navigationAction, state: navigationReducer })} />
+            <RootRouterContainer navigation={addNavigationHelpers({ actions: { navigationAction,homeAction }, state: navigationReducer, reducers: { homeReducer, navigationReducer } })} />
         );
     }
 }

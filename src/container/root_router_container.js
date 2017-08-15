@@ -14,13 +14,11 @@ import AppWithNavigationState from '../component/root_router';
 function mapStateToProps(state, props) {
     return {
         navigationReducer: state.navigationReducer,
-        homeReducer: state.homeReducer
     }
 };
 function mapToDispatch(dispatch) {
     return {
         navigationAction: bindActionCreators(navigationAction, dispatch),
-        homeAction:bindActionCreators(homeAction,dispatch)
     }
 }
 
